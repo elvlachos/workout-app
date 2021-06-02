@@ -6,6 +6,7 @@ class Workout {
     this.repetition = repetition;
   }
 }
+
 const workoutDays = {
   1: "cardio",
   2: "cardio-strength",
@@ -48,38 +49,45 @@ const workoutByType = {
   ],
 };
 
+const getTodaysWorkout = (date) => {
+  //get workout type by day
+  const day = date.getDay();
+  const workoutType = workoutDays[day];
+  //todo handle sunday
+  return workoutByType[workoutType];
+  //display datetime on header
+};
+
+const displayDate = (date) => {
+  const dd = String(date.getDate());
+  const mm = String(date.getMonth() + 1);
+  const yy = String(date.getFullYear());
+  document.getElementById("header-info").innerHTML =
+    "📅" + ` ${dd}/${mm}/${yy}`;
+};
+
+const renderCheckboxes = (workout) => {
+  let targetUl = document.getElementById("checkboxes");
+  workout.forEach(({ excersice, repetition }) => {
+    let checkbox = document.createElement("input");
+    let label = document.createElement("label");
+    let lisomth = document.createElement("li");
+    checkbox.type = "checkbox";
+    checkbox.class = "workoutListCheckbox";
+    checkbox.id = `cbox${excersice}`;
+    checkbox.onclick = (e) => {
+      let checkedBoolean = e.target.checked;
+      console.log(`${excersice} is ${checkedBoolean}`);
+      //...
+    };
+    lisomth.appendChild(checkbox);
+    lisomth.appendChild(label);
+    targetUl.appendChild(lisomth);
+    label.appendChild(document.createTextNode(`${repetition} - ${excersice}`));
+  });
+};
+
 const today = new Date();
-const dd = String(today.getDate());
-const mm = String(today.getMonth() + 1);
-const yy = String(today.getFullYear());
-console.log();
-
-function getDayName(dateString, locale) {
-  let date = new Date(dateString);
-  return date.toLocaleDateString(locale, { weekday: "long" });
-}
-const day = today.getDay();
-const workoutType = workoutDays[day];
-//todo handle sunday
-const workout = workoutByType[workoutType];
-document.getElementById("header-info").innerHTML =
-  "📅" + day + ` ${dd}/${mm}/${yy}`;
-
-let targetUl = document.getElementById("checkboxes");
-workout.forEach(({ excersice, repetition }) => {
-  let checkbox = document.createElement("input");
-  let label = document.createElement("label");
-  let lisomth = document.createElement("li");
-  checkbox.type = "checkbox";
-  checkbox.class = "workoutListCheckbox";
-  checkbox.id = `cbox${excersice}`;
-  checkbox.onclick = (e) => {
-    let checkedBoolean = e.target.checked;
-    console.log(`${excersice} is ${checkedBoolean}`);
-    //...
-  };
-  lisomth.appendChild(checkbox);
-  lisomth.appendChild(label);
-  targetUl.appendChild(lisomth);
-  label.appendChild(document.createTextNode(`${repetition} - ${excersice}`));
-});
+displayDate(today);
+const workout = getTodaysWorkout(today);
+renderCheckboxes(workout);
