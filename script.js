@@ -8,6 +8,7 @@ class Workout {
 }
 
 const workoutDays = {
+  0: "karekla",
   1: "cardio",
   2: "strength",
   3: "cardio",
@@ -141,6 +142,12 @@ const workoutByType = {
     new Workout({
       excersice: "Lying Leg Cross",
       repetition: "30δ * 2",
+    }),
+  ],
+  karekla: [
+    new Workout({
+      excersice: "Sit Down",
+      repetition: "0",
     }),
   ],
 };
