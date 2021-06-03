@@ -9,17 +9,17 @@ class Workout {
 
 const workoutDays = {
   1: "cardio",
-  2: "cardio-strength",
-  3: "strength",
-  4: "cardio",
+  2: "strength",
+  3: "cardio",
+  4: "cardioStrength",
   5: "strength",
-  6: "cardio-strength",
+  6: "cardioStrength",
 };
 
 const workoutByType = {
   cardio: [
     new Workout({
-      excersice: "Shadowboxing",
+      excersice: "Shadowboxing💪",
       repetition: "4 * 10 * 4",
     }),
     new Workout({
@@ -27,24 +27,24 @@ const workoutByType = {
       repetition: "10 * 5",
     }),
     new Workout({
-      excersice: "Squats",
-      repetition: "15 * 3",
+      excersice: "Squats💪",
+      repetition: "20 * 2",
     }),
     new Workout({
       excersice: "Lunges",
-      repetition: "20 * 3",
+      repetition: "15 * 3",
     }),
     new Workout({
       excersice: "Mountain Climbers",
-      repetition: "20 * 3",
+      repetition: "15 * 3",
     }),
     new Workout({
       excersice: "Side Plank",
-      repetition: "30 * 2 * 2",
+      repetition: "30δ * 2",
     }),
     new Workout({
       excersice: "Butt Kicks",
-      repetition: "40 * 2",
+      repetition: "40δ * 2",
     }),
     new Workout({
       excersice: "Inchworm",
@@ -61,22 +61,86 @@ const workoutByType = {
   ],
   strength: [
     new Workout({
-      excersice: "s1",
-      repetition: "15",
+      excersice: "Regular Push Ups",
+      repetition: "10 * 3",
     }),
     new Workout({
-      excersice: "s2",
-      repetition: "15",
+      excersice: "Straight Push Ups - Slow",
+      repetition: "7 * 3",
+    }),
+    new Workout({
+      excersice: "Lateral Arm Raise - Side💪",
+      repetition: "15 * 2",
+    }),
+    new Workout({
+      excersice: "Lateral Arm Raise - Front💪",
+      repetition: "10 * 2",
+    }),
+    new Workout({
+      excersice: "Plank",
+      repetition: "45δ * 3",
+    }),
+    new Workout({
+      excersice: "Side Plank",
+      repetition: "30δ * 2",
+    }),
+    new Workout({
+      excersice: "Crunches",
+      repetition: "15 * 3",
+    }),
+    new Workout({
+      excersice: "Curls💪",
+      repetition: "12 * 3",
+    }),
+    new Workout({
+      excersice: "Shoulder Arm Raise",
+      repetition: "10 * 2",
+    }),
+    new Workout({
+      excersice: "Decline Push Ups",
+      repetition: "10 * 2",
     }),
   ],
   cardioStrength: [
     new Workout({
-      excersice: "cs1",
-      repetition: "15",
+      excersice: "Squats💪",
+      repetition: "20 * 2",
     }),
     new Workout({
-      excersice: "cs2",
-      repetition: "15",
+      excersice: "Butt Kicks",
+      repetition: "40δ * 2",
+    }),
+    new Workout({
+      excersice: "Supermans",
+      repetition: "15 * 2",
+    }),
+    new Workout({
+      excersice: "Plank Shoulder Taps",
+      repetition: "10 * 3",
+    }),
+    new Workout({
+      excersice: "Plank",
+      repetition: "45δ * 3",
+    }),
+    new Workout({
+      excersice: "Lying Leg Raise",
+      repetition: "15 * 2",
+    }),
+    new Workout({
+      excersice: "Lying Hand Raise💪",
+      repetition: "10 * 3",
+    }),
+    new Workout({
+      excersice: "Diamond Push Ups",
+      repetition: "10 * 2",
+    }),
+    new Workout({
+      excersice: "Regular Push Ups",
+      repetition: "15 * 2",
+    }),
+    new Workout({
+      excersice: "Lying Leg Cross",
+      repetition: "30δ * 2",
     }),
   ],
 };

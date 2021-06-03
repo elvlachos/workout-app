@@ -8,6 +8,7 @@ body {
   background-color: #e4e3e8;
   font-size: 100%;
   vertical-align: baseline;
+  font-family: Noto Sans;
 }
 
 .header {
@@ -16,7 +17,6 @@ body {
   top: 0px;
   height: 200px;
   font-weight: bold;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 #header-info {
@@ -32,14 +32,14 @@ body {
 
 #score-header {
   text-align: center;
-  font-size: 200%;
+  font-size: 175%;
 }
 
 #checkbox-container {
   position: relative;
   margin-left: 30%;
   text-align: left;
-  font-size: 300%;
+  font-size: 275%;
 }
 
 ul {
@@ -51,6 +51,6 @@ ul {
 }
 
 input[type="checkbox"] {
-  transform: scale(3);
+  transform: scale(2.75);
   margin: 20px;
 }
