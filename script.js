@@ -59,13 +59,23 @@ const getTodaysWorkout = (date) => {
 };
 
 const displayDate = (date) => {
+  var days = [
+    "Κυριακή",
+    "Δευτέρα",
+    "Τρίτη",
+    "Τετάρτη",
+    "Πέμπτη",
+    "Παρασκευή",
+    "Σάββατο",
+  ];
   const dd = String(date.getDate());
   const mm = String(date.getMonth() + 1);
   const yy = String(date.getFullYear());
   document.getElementById("header-info").innerHTML =
-    "📅" + ` ${dd}/${mm}/${yy}`;
+    "📅" + days[date.getDay()] + ` ${dd}/${mm}/${yy}`;
 };
 
+let dailyScore = 0;
 const renderCheckboxes = (workout) => {
   let targetUl = document.getElementById("checkboxes");
   workout.forEach(({ excersice, repetition }) => {
@@ -77,8 +87,17 @@ const renderCheckboxes = (workout) => {
     checkbox.id = `cbox${excersice}`;
     checkbox.onclick = (e) => {
       let checkedBoolean = e.target.checked;
-      console.log(`${excersice} is ${checkedBoolean}`);
-      //...
+      if (checkedBoolean) {
+        dailyScore += 1;
+        document.getElementById(
+          "score-header"
+        ).innerHTML = `Score: ${dailyScore}/10`;
+      } else {
+        dailyScore -= 1;
+        document.getElementById(
+          "score-header"
+        ).innerHTML = `Score: ${dailyScore}/10`;
+      }
     };
     lisomth.appendChild(checkbox);
     lisomth.appendChild(label);
