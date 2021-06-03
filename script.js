@@ -19,12 +19,44 @@ const workoutDays = {
 const workoutByType = {
   cardio: [
     new Workout({
-      excersice: "c1",
-      repetition: "15",
+      excersice: "Shadowboxing",
+      repetition: "4 * 10 * 4",
     }),
     new Workout({
-      excersice: "c2",
-      repetition: "15",
+      excersice: "Standing Leg Raises",
+      repetition: "10 * 5",
+    }),
+    new Workout({
+      excersice: "Squats",
+      repetition: "15 * 3",
+    }),
+    new Workout({
+      excersice: "Lunges",
+      repetition: "20 * 3",
+    }),
+    new Workout({
+      excersice: "Mountain Climbers",
+      repetition: "20 * 3",
+    }),
+    new Workout({
+      excersice: "Side Plank",
+      repetition: "30 * 2 * 2",
+    }),
+    new Workout({
+      excersice: "Butt Kicks",
+      repetition: "40 * 2",
+    }),
+    new Workout({
+      excersice: "Inchworm",
+      repetition: "30δ * 3",
+    }),
+    new Workout({
+      excersice: "Plank Shoulder Taps",
+      repetition: "10 * 3",
+    }),
+    new Workout({
+      excersice: "Τρέξιμο",
+      repetition: "30λ",
     }),
   ],
   strength: [
